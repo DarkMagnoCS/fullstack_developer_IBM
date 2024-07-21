@@ -60,7 +60,6 @@ def registration(request):
     try:
         User.objects.get(username=username)
         username_exist = True
-    except:
         logger.debug("{} is new user".format(username))
 
     if not username_exist:
